@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoRotate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcw-5t-QsM">
+                                <rect key="frame" x="0.0" y="246" width="414" height="414"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tcw-5t-QsM" secondAttribute="height" multiplier="1:1" id="ZLY-Ve-ZVr"/>
+                                    <constraint firstAttribute="width" secondItem="tcw-5t-QsM" secondAttribute="height" multiplier="1:1.5" id="pHj-Ez-5lQ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="pHj-Ez-5lQ"/>
+                                    </mask>
+                                </variation>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fq-pN-9XZ">
+                                <rect key="frame" x="172.5" y="69" width="69" height="30"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="CLICK ME"/>
+                                <connections>
+                                    <action selector="toggleExpand" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="h1s-JE-PGa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="tcw-5t-QsM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="QYZ-wp-T58"/>
+                            <constraint firstItem="9Fq-pN-9XZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Szw-Di-mZy"/>
+                            <constraint firstItem="9Fq-pN-9XZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="U3O-oM-cfH"/>
+                            <constraint firstItem="tcw-5t-QsM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f3h-oV-xgQ"/>
+                            <constraint firstItem="tcw-5t-QsM" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="fHD-g3-52F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="tcw-5t-QsM" id="IHz-sL-Sgu"/>
+                        <outlet property="equalConstraint" destination="ZLY-Ve-ZVr" id="6Kj-iL-yD5"/>
+                        <outlet property="expandConstraint" destination="pHj-Ez-5lQ" id="Ccr-di-6cG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
